@@ -1,0 +1,39 @@
+{
+  "name": "oracle",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "dev": "tsx --env-file=.env --watch src/index.ts",
+    "build": "tsc",
+    "start": "node --env-file=.env dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "cross-env SLACK_BOT_TOKEN=xoxb-test SLACK_APP_TOKEN=xapp-test SLACK_SIGNING_SECRET=test NODE_OPTIONS=--experimental-vm-modules npx jest --forceExit",
+    "test:watch": "cross-env SLACK_BOT_TOKEN=xoxb-test SLACK_APP_TOKEN=xapp-test SLACK_SIGNING_SECRET=test NODE_OPTIONS=--experimental-vm-modules npx jest --watch --forceExit",
+    "test:coverage": "cross-env SLACK_BOT_TOKEN=xoxb-test SLACK_APP_TOKEN=xapp-test SLACK_SIGNING_SECRET=test NODE_OPTIONS=--experimental-vm-modules npx jest --coverage --forceExit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "@slack/bolt": "^4.1.0",
+    "@slack/web-api": "^7.8.0",
+    "bullmq": "^5.76.0",
+    "express": "^4.21.0",
+    "ioredis": "^5.4.0",
+    "pino": "^9.6.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.0",
+    "cross-env": "^7.0.3",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.0",
+    "tsx": "^4.19.0",
+    "typescript": "~5.8.0"
+  }
+}

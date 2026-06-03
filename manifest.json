@@ -1,0 +1,54 @@
+{
+  "_metadata": {
+    "major_version": 2,
+    "minor_version": 1
+  },
+  "display_information": {
+    "name": "Oracle",
+    "description": "Autonomous workspace intelligence layer. Detects emerging signals, enriches with system context, and delivers actionable briefs.",
+    "background_color": "#1a1a2e",
+    "long_description": "Oracle monitors your Slack workspace in real time. It detects cross-channel signal patterns, enriches them with external system context from GitHub and Jira via MCP, scores confidence, and delivers structured briefs to the right person at the right moment — with one-click action buttons."
+  },
+  "features": {
+    "bot_user": {
+      "display_name": "Oracle",
+      "always_online": true
+    },
+    "slash_commands": [
+      {
+        "command": "/oracle-health",
+        "description": "Check Oracle system health, queue depths, and fire rate",
+        "usage_hint": "[component]",
+        "should_escape": false
+      }
+    ]
+  },
+  "oauth_config": {
+    "scopes": {
+      "bot": [
+        "channels:history",
+        "channels:read",
+        "chat:write",
+        "commands",
+        "im:write",
+        "reactions:read",
+        "users:read"
+      ]
+    }
+  },
+  "settings": {
+    "event_subscriptions": {
+      "bot_events": [
+        "message.channels",
+        "reaction_added",
+        "member_joined_channel"
+      ]
+    },
+    "interactivity": {
+      "is_enabled": true
+    },
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": true,
+    "token_rotation_enabled": false
+  }
+}
