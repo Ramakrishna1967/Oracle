@@ -10,7 +10,10 @@ Oracle monitors your Slack workspace in real time, detects emerging cross-channe
 [![Node.js](https://img.shields.io/badge/Node.js-22+-339933?style=flat-square&logo=node.js)](https://nodejs.org/)
 [![Redis](https://img.shields.io/badge/Redis-BullMQ-DC382D?style=flat-square&logo=redis)](https://redis.io/)
 [![Slack](https://img.shields.io/badge/Slack-Bolt_SDK-4A154B?style=flat-square&logo=slack)](https://slack.dev/bolt-js/)
-[![License](https://img.shields.io/badge/License-Private-lightgrey?style=flat-square)]()
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
 
 </div>
 
